@@ -29,19 +29,6 @@ Mogobi2/
 
 ---
 
-## 🚀 Getting Started
-
-```bash
-git clone https://github.com/YuvalThePro/Mogobi2.git
-cd Mogobi2
-npm install
-Create a .env file in the root directory:
-PORT=3000
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=your_secret_key
-Then start the server:
-npm start
-
 
 👥 Authors
 	•	David Levi
@@ -54,3 +41,16 @@ npm start
 Mogobi2 is a backend server that handles user registration, authentication, and data management using secure and scalable practices.
 This project was developed as the final assignment for our academic course in server development with Node.js.
 
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/YuvalThePro/Mogobi2.git
+cd Mogobi2
+npm install
+Create a .env file in the root directory:
+PORT=3000
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_secret_key
+Then start the server:
+npm start
