@@ -6,5 +6,5 @@ export const getUserById = id => User.findById(id).select('-password');
 export const findUserByEmail = email => User.findOne({ email }).select('+password');
 export const updateUser = (id, updates) =>
   User.findByIdAndUpdate(id, updates, { new: true, runValidators: true })
-      .select('-password');
+    .select('-password');
 export const deleteUser = id => User.findByIdAndDelete(id);
