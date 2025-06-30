@@ -16,16 +16,17 @@
 
 ---
 
-## 📁 Project Structure
-
+📁 Project Structure
+```plaintext
 Mogobi2/
-├── controllers/      # Logic for handling requests
-├── routes/           # API endpoint definitions
-├── models/           # MongoDB schemas
-├── middleware/       # Auth and error handlers
-├── config/           # DB and app configuration
-├── app.js            # Express app setup
-└── server.js         # Entry point
+│
+├── controllers/       Logic for handling requests
+├── routes/            API endpoint definitions
+├── models/            MongoDB schemas
+├── middleware/        Auth and error handlers
+├── config/            DB and app configuration
+├── app.js             Express app setup
+└── server.js          Entry point
 
 ---
 
