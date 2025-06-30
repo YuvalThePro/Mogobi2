@@ -8,18 +8,18 @@ const sign = user =>
 
 export const authService = {
     async register(data) {
-        const user = await createUser(data); // user.service handles hashing
+        const user = await createUser(data);
         const token = sign(user);
         return { user, token };
     },
     async login(email, password) {
-    const user = await findUserByEmail(email); // returns hash via +password
-    if (!user) return null;
+        const user = await findUserByEmail(email);
+        if (!user) return null;
 
-    const ok = await verifyPassword(password, user.password);
-    if (!ok) return null;
+        const ok = await verifyPassword(password, user.password);
+        if (!ok) return null;
 
-    const token = sign(user);
-    return { user, token };
-  }
+        const token = sign(user);
+        return { user, token };
+    }
 };
