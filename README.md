@@ -32,8 +32,8 @@ Mogobi2/
 
 
 👥 Authors
+  •	Yuval Ifraimov
 	•	David Levi
-	•	Yuval Ifraimov
 
 ⸻
 
@@ -48,7 +48,8 @@ This project was developed as the final assignment for our academic course in se
 ```bash
 git clone https://github.com/YuvalThePro/Mogobi2.git
 cd Mogobi2
-npm install
+npm install dotenv@16.4.7 bcrypt cors express jwt mongoose validator winston
+npm install nodemon --save-dev
 Create a .env file in the root directory:
 PORT=3000
 MONGO_URI=your_mongo_connection_string
