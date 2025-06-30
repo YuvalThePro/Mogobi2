@@ -5,11 +5,11 @@ dotenv.config();
 
 const PORT = config.PORT || 3000;
 
+(async () => {
+  await connectToDB();
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+})();
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-(async () => {
-  await connectToDB(); 
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-})();
