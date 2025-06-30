@@ -44,4 +44,14 @@ const userSchema = new mongoose.Schema({
     strict: true,
 });
 
+userSchema.pre('save', async function () {
+  if (this.isModified('password'))
+    this.password = await hashPassword(this.password);
+});
+
+userSchema.methods.comparePassword = async function (candidate) {
+  const { verifyPassword } = await import('../utiles/hash.js');
+  return verifyPassword(candidate, this.password);
+};
+
 export default mongoose.model('User', userSchema);
