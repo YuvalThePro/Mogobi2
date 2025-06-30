@@ -27,7 +27,7 @@ Mogobi2/
 ├── config/            DB and app configuration
 ├── app.js             Express app setup
 └── server.js          Entry point
-
+```
 ---
 
 
