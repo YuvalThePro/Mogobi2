@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken';
+import { jwtSecret } from '../config/index.js';
 import { createLogger } from '../utiles/logger.js';
 
 const logger = createLogger('AUTH-MW');
@@ -10,7 +11,7 @@ export const verifyToken = (req, res, next) => {
     }
 
     try {
-        req.user = jwt.verify(hdr.split(' ')[1], process.env.JWT_SECRET);
+        req.user = jwt.verify(hdr.split(' ')[1], jwtSecret);
         next();
     } catch (e) {
         logger.warn(`Bad token: ${e.message}`);

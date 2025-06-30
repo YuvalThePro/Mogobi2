@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import 'dotenv/config';
 
 export const port = process.env.PORT
 export const mongoDbUri = process.env.MONGODB_URI
