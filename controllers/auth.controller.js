@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { jwtSecret } from '../config/index.js';
 import { createUser, findUserByEmail } from '../services/user.service.js';
-import { verifyPassword } from '../utiles/hash.js';
 
 const sign = user =>
     jwt.sign({ sub: user._id, role: user.role }, jwtSecret, { expiresIn: '1h' });
