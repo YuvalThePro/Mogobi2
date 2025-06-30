@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import validator from 'validator';
+import { hashPassword } from '../utiles/hash.js';
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -32,11 +33,6 @@ const userSchema = new mongoose.Schema({
                 throw new Error('Password must be at least 7 characters long');
             }
         },
-    },
-    profileImage: {
-        type: String,
-        default:
-            'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp'
     },
     age: {
         type: Number,
