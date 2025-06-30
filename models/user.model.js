@@ -28,7 +28,15 @@ const userSchema = new mongoose.Schema({
             if (value.toLowerCase().includes('password')) {
                 throw new Error('Password cannot contain "password"');
             }
+            if (value.length < 7) {
+                throw new Error('Password must be at least 7 characters long');
+            }
         },
+    },
+    profileImage: {
+      type: String,
+      default:
+        'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp'
     },
     age: {
         type: Number,
