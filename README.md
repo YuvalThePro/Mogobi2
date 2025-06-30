@@ -1,7 +1,7 @@
 <h1 align="center">Mogobi2</h1>
 <p align="center">
   🚀 A backend user management server built with Node.js & Express.js.<br>
-  🧑‍💻 Final project by <b>David Levi</b> & <b>Yuval Ifraimov</b> for the Node.js Server Programming course.
+  🧑‍💻 Final project by <b>David Levi</b> & <b>Yuval Ifraimov</b> for Node.js Server Programming course.
 </p>
 
 ---
